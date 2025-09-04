@@ -147,7 +147,7 @@ Add to your **`hyprland.conf`** for quick toggle (e.g., **Alt + A**):
 bind = ALT, A, exec, ~/path/to/ai_panel.sh
 ```
 
-Or for Python:
+Or for Python(needs the ai_panel.py running):
 
 ```ini
 bind = ALT, A, exec, pkill -SIGUSR1 -f ~/path/to/ai_panel.py
