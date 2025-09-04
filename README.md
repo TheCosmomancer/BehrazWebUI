@@ -1,6 +1,8 @@
 # 💫 AI Chat Panel for Hyprland (Ollama + Open WebUI)
 
-These scripts integrate **[Ollama](https://ollama.ai/)** with **[Open WebUI](https://github.com/open-webui/open-webui)** inside **Hyprland** to provide a fast, local, and privacy-friendly AI chat panel.  
+These tools integrate **[Ollama](https://ollama.ai/)** with **[Open WebUI](https://github.com/open-webui/open-webui)** inside **Hyprland** to provide a fast, local, and privacy-friendly AI chat panel.  
+
+You can control the AI panel either via **Bash scripts** or a **Python script**, depending on your preference.
 
 including:
 - 🐳 A **Docker setup** for running Open WebUI with Ollama.  
@@ -27,6 +29,7 @@ Here’s what the AI panel looks like in action:
 - **Hyprland integration**: Toggle the AI panel from anywhere with `ai_panel.sh`.  
 - **Customizable**: Easily adjust panel width, opacity, and animation.  
 - **Persistent storage**: Model and WebUI data are stored in mounted volumes.  
+- **Flexible control**: Use either Bash scripts (`ai_control.sh` + `ai_panel.sh`) or Python (`ai_control.sh` + `ai_panel.py`) for the panel.  
 
 ---
 
@@ -37,7 +40,10 @@ Here’s what the AI panel looks like in action:
 - **Ollama** installed locally (`ollama serve` must be available)  
 - **Chromium** (panel opens in app mode)  
 - **jq** + **hyprctl** (for window handling)  
-
+- **for python panel** : 
+```bash
+paru -S python-gobject gobject-introspection gtk3 webkit2gtk gtk-layer-shell
+```
 ---
 
 ## 🚀 Setup
@@ -81,6 +87,8 @@ Logs are stored in `/tmp/ollama_serve.log`.
 
 `ai_panel.sh` creates a **left-side slide-in panel** with Chromium running Open WebUI.
 
+**Option 1: Bash Script**
+
 ```bash
 # Toggle the AI panel
 ./ai_panel.sh
@@ -92,7 +100,12 @@ Logs are stored in `/tmp/ollama_serve.log`.
   ```bash
   ./ai_panel.sh -d
   ```
+  
+**Option 2: Python Script**
 
+```bash
+python3 ai_panel.py
+```
 ---
 
 ## ⚙️ Configuration
@@ -127,28 +140,28 @@ Inside `ai_panel.sh` you can tweak:
 
 ## ⌨️ Hyprland Keybinding
 
-To make toggling the AI panel seamless, you can bind it to a hotkey in your **`hyprland.conf`**.  
-
-For example, to use **Alt + A**:  
+Add to your **`hyprland.conf`** for quick toggle (e.g., **Alt + A**):
 
 ```ini
-# Open/close the AI panel with Alt + A
+# Open/close AI panel
 bind = ALT, A, exec, ~/path/to/ai_panel.sh
 ```
 
-📌 Replace `~/path/to/` with the actual path to your script.  
+Or for Python:
 
-Now pressing **Alt + A** will smoothly slide the AI panel in/out!  
+```ini
+bind = ALT, A, exec, pkill -SIGUSR1 -f ~/path/to/ai_panel.py
+```
 
 ---
-
 
 ## 📂 Repository Structure
 
 ```
 .
 ├── ai_control.sh   # Start/stop Ollama + WebUI
-├── ai_panel.sh     # Hyprland dropdown panel script
+├── ai_panel.sh     # Hyprland dropdown panel (Bash)
+├── ai_panel.py     # Hyprland dropdown panel (Python)
 ├── demo/           # Demo media (gif/mp4)
 └── README.md       # This file
 ```
