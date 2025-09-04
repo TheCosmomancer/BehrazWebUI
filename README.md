@@ -8,7 +8,18 @@ including:
 - 🪟 A **Hyprland panel script (`ai_panel.sh`)** that toggles a sleek left-side dropdown AI panel with animations.  
 
 ---
+## 🎥 Demo
 
+Here’s what the AI panel looks like in action:  
+
+![AI Panel Demo](demo/demo.GIF)  
+
+- The panel slides in from the **left** with smooth animation.  
+- Runs inside **Chromium app mode** for a clean, distraction-free UI.  
+- Easily toggled with **Alt + A**.  
+
+
+---
 ## ✨ Features
 
 - **Local AI only**: Models run with Ollama on your machine.  
@@ -131,18 +142,6 @@ Now pressing **Alt + A** will smoothly slide the AI panel in/out!
 
 ---
 
-## 🎥 Demo
-
-Here’s what the AI panel looks like in action:  
-
-![AI Panel Demo](demo/demo.GIF)  
-
-- The panel slides in from the **left** with smooth animation.  
-- Runs inside **Chromium app mode** for a clean, distraction-free UI.  
-- Easily toggled with **Alt + A**.  
-
-
----
 
 ## 📂 Repository Structure
 
