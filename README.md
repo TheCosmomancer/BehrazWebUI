@@ -1,4 +1,4 @@
-# 💫 Local AI Chat Panel for Hyprland (Ollama + Open WebUI)
+# 💫 AI Chat Panel for Hyprland (Ollama + Open WebUI)
 
 These scripts integrate **[Ollama](https://ollama.ai/)** with **[Open WebUI](https://github.com/open-webui/open-webui)** inside **Hyprland** to provide a fast, local, and privacy-friendly AI chat panel.  
 
@@ -22,7 +22,7 @@ Here’s what the AI panel looks like in action:
 ---
 ## ✨ Features
 
-- **Local AI only**: Models run with Ollama on your machine.  
+- **Local AI**: Models run with Ollama on your machine.  
 - **One-command start/stop**: Manage services via `ai_control.sh`.  
 - **Hyprland integration**: Toggle the AI panel from anywhere with `ai_panel.sh`.  
 - **Customizable**: Easily adjust panel width, opacity, and animation.  
