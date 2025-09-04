@@ -7,7 +7,8 @@ You can control the AI panel either via **Bash scripts** or a **Python script**,
 including:
 - 🐳 A **Docker setup** for running Open WebUI with Ollama.  
 - 🎛️ A **controller script (`ai_control.sh`)** to start/stop Ollama and the WebUI container.  
-- 🪟 A **Hyprland panel script (`ai_panel.sh`)** that toggles a sleek left-side dropdown AI panel with animations.  
+- 🪟 A **Hyprland panel script (`ai_panel.sh`)** that toggles a sleek left-side dropdown AI panel with animations.
+- 🐍 A **Python panel script (`ai_panel.py`)** that handles GTK3 + WebKit2 rendering, integrates GtkLayerShell for Hyprland overlay, and animates the panel sliding in/out.
 
 ---
 ## 🎥 Demo
