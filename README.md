@@ -151,7 +151,7 @@ bind = ALT, A, exec, ~/path/to/ai_panel.sh
 Or for Python(needs the ai_panel.py running):
 
 ```ini
-bind = ALT, A, exec, pkill -SIGUSR1 -f ~/path/to/ai_panel.py
+bind = ALT, A, exec, pkill -SIGUSR1 -f ai_panel.py
 ```
 
 ---
